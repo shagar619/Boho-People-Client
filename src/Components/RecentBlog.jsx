@@ -82,7 +82,7 @@ const RecentBlog = () => {
     key={idx}
     className="bg-white p-6 transition hover:scale-105 shadow-xl rounded-md">
         <div>
-            <img className="w-[480px] h-80 rounded" src={item.image} alt="" />
+            <img className="w-[480px] h-80 rounded object-cover" src={item.image} alt="" />
         </div>
         <h2 className="text-3xl font-bold my-8 text-center">{item.title}</h2>
         <h3 className="text-lg font-medium my-3 flex items-center gap-3"> Category : {item.category}</h3>
