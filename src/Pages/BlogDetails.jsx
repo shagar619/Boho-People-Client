@@ -59,7 +59,7 @@ const BlogDetails = () => {
 
 
 <div>
-    <img className="h-[700px] w-full rounded" src={image} alt="" />
+    <img className="h-[800px] w-full rounded object-cover" src={image} alt="" />
 </div>
 <h3 className="text-5xl font-semibold text-center my-16">{title}</h3>
 
