@@ -42,20 +42,20 @@ const WishList = () => {
 
     return (
 
-<div className="bg-white mx-12 md:mx-24">
+<div className="bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] py-24">
 
     <Helmet>
         <title>BOHO PEOPLE | WISHLIST</title>
     </Helmet>
 
-    <div className="pb-56 bg-blue-100 pt-12 mb-16">
+    <div className="">
             
             <SectionTitle 
             subHeading={"Keep track of your favorite blogs all in one place! Explore the posts you've saved, revisit inspiring content, and manage your wishlist with ease. Access details or remove blogs you no longer wish to keep—all just a click away!"}
             heading={"Your Wishlist"}>
             </SectionTitle>
 
-        <div className="bg-white p-12 mx-36">
+        <div className="bg-white mx-4 md:w-8/12 md:mx-auto p-4 md:p-12 rounded-sm shadow-lg">
 
             <h2 className="text-[#151515] text-[32px] font-bold mb-8 uppercase">Total Wishlist : {wishlist.length}</h2>
 
@@ -66,7 +66,7 @@ const WishList = () => {
         <table className="table w-full">
 
     {/* head */}
-        <thead className="bg-blue-600 text-base text-white font-semibold uppercase">
+        <thead className="bg-blue-500 text-base text-white font-semibold uppercase">
             <tr>
                 <th>#</th>
                 <th>image</th>
@@ -125,8 +125,8 @@ const WishList = () => {
 </div>
 
 </div>
-        </div>
-    );
+</div>
+);
 };
 
 export default WishList;

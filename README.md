@@ -144,6 +144,6 @@ We welcome contributions! If you’d like to improve *BOHO PEOPLE*, feel free to
 
 ---
 ## 📩 Contact
-For any queries, reach out at [ashagar619@gmail.com](mailto:ashagar619@gmail.com.com).
+For any queries, reach out at [ashagar619@gmail.com](mailto:ashagar619@gmail.com).
 
 🛠️ Happy Coding & Stay Boho! 🌿✨

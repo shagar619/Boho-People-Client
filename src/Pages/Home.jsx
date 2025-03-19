@@ -4,10 +4,11 @@ import Comments from "../Components/Comments";
 import Hero from "../Components/Hero";
 import Newsletter from "../Components/Newsletter";
 import RecentBlog from "../Components/RecentBlog";
+import Editor from "../Components/Editor";
 
 const Home = () => {
     return (
-        <div>
+        <div className="bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')]">
 
             <Helmet>
                 <title>BOHO PEOPLE | HOME</title>

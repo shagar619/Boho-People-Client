@@ -90,14 +90,14 @@ return (
     {
     user ? 
     <div className="flex items-center gap-6 ">
-    <h3 className="text-xl font-semibold hover:text-warning transition hover:scale-110">{user.email}</h3>
+    <h3 className="text-xl font-semibold text-blue-600 hover:text-warning transition hover:scale-110">{user.email}</h3>
     <button 
     onClick={handleSignOut}
     className="btn bg-blue-600 text-white text-xl border-none">Sign Out</button>
     </div>
     :
     <>
-    <Link className="underline text-xl font-semibold hover:text-warning transition hover:scale-110" to="/register">Register</Link>
+    <Link className="underline text-xl font-semibold text-blue-600 hover:text-warning transition hover:scale-110" to="/register">Register</Link>
     <Link to="/signin"><button className="btn bg-blue-600 text-white border-none text-xl">Sign In</button></Link>
     </>
     }

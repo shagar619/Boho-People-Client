@@ -46,17 +46,17 @@ const SignIn = () => {
 
     return (
 
-        <div className="bg-white mx-12 md:mx-24">
+        <div className="bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] py-24">
 
             <Helmet>
                 <title>BOHO PEOPLE | SIGN IN</title>
             </Helmet>
 
-        <div className="pb-12 pt-36 mb-12 bg-blue-100">
+        <div className="">
 
-        <div className="w-1/2 mx-auto py-24">
-            <h3 className="text-blue-600 text-5xl font-semibold text-center mb-8 underline">Welcome Back!</h3>
-            <h1 className="text-4xl font-bold my-4 text-center uppercase">Member Login</h1>
+        <div className="md:w-1/2 lg:w-1/3 mx-12 md:mx-auto py-24">
+            <h3 className="text-blue-500 text-2xl font-semibold text-center mb-8 underline">Welcome Back!</h3>
+            <h1 className="text-3xl font-bold my-4 text-center uppercase">Member Login</h1>
             <p className="text-base text-gray-500 font-normal text-center">Access to all features. No credit card required.</p>
 
         {/* google login */}
@@ -69,24 +69,24 @@ const SignIn = () => {
 
             <form 
             onSubmit={handleSignIn}
-            className="space-y-5 bg-white w-full px-12 py-10 rounded-lg shadow-lg">
+            className="space-y-5 bg-blue-100 w-full px-12 py-10 rounded-sm shadow-lg">
 
             <label className="form-control w-full">
                 <div className="label">
                     <span className="label-text text-lg font-normal">E-mail *</span>
                 </div>
-                    <input type="email" name="email" placeholder="Enter Your email" className="input input-bordered w-full" />
+                    <input type="email" name="email" placeholder="Enter Your email" className="input border-none w-full rounded-sm" />
             </label>
 
             <label className="form-control w-full">
                 <div className="label">
                     <span className="label-text text-lg font-normal">Password *</span>
                 </div>
-                    <input type="password" name="password" placeholder="Enter Your password" className="input input-bordered w-full" />
+                    <input type="password" name="password" placeholder="Enter Your password" className="input border-none w-full rounded-sm" />
             </label>
 
 
-            <input className="bg-blue-600 text-white btn w-full py-2 rounded cursor-pointer text-lg" type="submit" value="Login" />
+            <input className="bg-blue-500 text-white btn w-full py-2 rounded cursor-pointer text-lg" type="submit" value="Login" />
 
             </form>
 

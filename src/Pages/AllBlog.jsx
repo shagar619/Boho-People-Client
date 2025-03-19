@@ -63,46 +63,43 @@ const AllBlog = () => {
 
     return (
 
-        <div className="bg-white mx-12 md:mx-24">
+        <div className="bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] py-24">
 
         <Helmet>
             <title>BOHO PEOPLE | ALL BLOGS</title>
         </Helmet>
 
-        <div className="pb-56 bg-blue-100 pt-12 mb-12 px-16">
-
         <div>
-
-            <h1 className="uppercase text-center text-4xl font-bold text-blue-800 underline mt-36">All Blogs</h1>
-
             <SectionTitle
-        heading={'Explore Our Blogs'}
+        heading={'🚀 Explore Our Blogs'}
         subHeading={"Dive into a world of insights, inspiration, and information. Whether you're looking for the latest in technology, health tips, travel guides, or lifestyle hacks, our collection of blogs has something for everyone. Start exploring and discover topics that captivate your interest!"}></SectionTitle>
 
         </div>
 
+<div className="md:w-10/12 lg:w-9/12 mx-12 md:mx-auto">
 
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
 {
     blogs.map((item, idx) => 
     <div 
     key={idx}
-    className="bg-white p-6 transition hover:scale-105 shadow-xl rounded-md">
+    className="">
         <div>
-            <img className="w-[480px] h-80 rounded object-cover" src={item.image} alt="" />
+            <img className="w-[480px] h-96 object-cover" src={item.image} alt="" />
         </div>
-        <h2 className="text-3xl font-bold my-8 text-center">{item.title}</h2>
-        <h3 className="text-lg font-medium my-3 flex items-center gap-3"> Category : {item.category}</h3>
-        <p className="text-lg font-normal text-gray-500 my-3">{item.long_description}</p>
+        <h3 className="text-lg font-medium mb-3 mt-6 flex items-center gap-3"> Category : {item.category}</h3>
+        <h2 className="text-lg font-medium my-3 flex items-center gap-3">Author : {item.author_name}</h2>
+        <h3 className="text-lg font-medium my-3 flex items-center gap-3">Date & Time : {item.date_time}</h3>
+        <p className="text-base font-normal text-gray-600 my-3">{item.long_description.slice(0, 120)}... <Link to={`/blogs/${item._id}`} className="underline text-black hover:text-blue-500">See More</Link></p>
 
         <div className="flex justify-between items-center">
 
-        <Link to={`/blogs/${item._id}`}><button className="btn text-xl font-bold bg-blue-600 text-white my-3">Details</button></Link>
+        <Link to={`/blogs/${item._id}`}><button className="btn text-base font-medium bg-blue-500 text-white my-3 uppercase rounded-none">Details</button></Link>
 
         <button 
         onClick={() => handleAddToWishlist(item)}
-        className="btn text-xl font-bold bg-blue-600 text-white my-3">ADD WISHLIST</button>
+        className="btn text-base font-medium bg-blue-500 text-white my-3 rounded-none">ADD WISHLIST</button>
 
         </div>
     </div>)
@@ -110,9 +107,9 @@ const AllBlog = () => {
 
 
 </div>
-            
 </div>
 </div>
+
 );
 };
 

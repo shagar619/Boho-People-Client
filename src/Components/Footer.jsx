@@ -2,11 +2,12 @@ import { FaApple, FaFacebook, FaGooglePlay, FaInstagram, FaTwitter } from 'react
 import logo from './../assets/logo/BOHO.png'
 import { Link } from 'react-router-dom';
 
-
+// bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')]
 
 const Footer = () => {
     return (
-        <div className='bg-blue-50 px-12'>
+        <div className='px-12'>
+
         <div>
             <hr className="mt-4 mb-16" />
             <div className="flex justify-between items-start">

@@ -66,35 +66,36 @@ const RecentBlog = () => {
 
 
     return (
-        <div className="mb-24">
+        <div className="mt-12">
 
             <SectionTitle
             heading={"🔥 Latest Insights & Stories"}
             subHeading={"Stay updated with our freshest blogs, featuring expert insights, trending topics, and in-depth stories. Explore our latest six articles and dive into engaging content that keeps you informed and inspired. 🚀"}>
             </SectionTitle>
 
-    <div className="w-10/12 mx-auto bg-slate-200 py-12 ">
-    <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="w-10/12 mx-auto py-12">
+    <div className="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
 {
     recentBlog.map((item, idx) => 
     <div 
     key={idx}
-    className="bg-white p-6 transition hover:scale-105 shadow-xl rounded-md">
+    className="">
         <div>
-            <img className="w-[480px] h-80 rounded object-cover" src={item.image} alt="" />
+            <img className="w-[480px] h-96 object-cover" src={item.image} alt="" />
         </div>
-        <h2 className="text-3xl font-bold my-8 text-center">{item.title}</h2>
-        <h3 className="text-lg font-medium my-3 flex items-center gap-3"> Category : {item.category}</h3>
-        <p className="text-lg font-normal text-gray-500 my-3">{item.long_description}</p>
+        <h3 className="text-lg font-medium mb-3 mt-6 flex items-center gap-3"> Category : {item.category}</h3>
+        <h2 className="text-lg font-medium my-3 flex items-center gap-3">Author : {item.author_name}</h2>
+        <h3 className="text-lg font-medium my-3 flex items-center gap-3">Date & Time : {item.date_time}</h3>
+        <p className="text-base font-normal text-gray-600 my-3">{item.long_description.slice(0, 120)}... <Link to={`/blogs/${item._id}`} className="underline text-black hover:text-blue-500">See More</Link></p>
 
         <div className="flex justify-between items-center">
 
-        <Link to={`/blogs/${item._id}`}><button className="btn text-xl font-bold bg-blue-600 text-white my-3 uppercase">Details</button></Link>
+        <Link to={`/blogs/${item._id}`}><button className="btn text-base font-medium bg-blue-600 text-white my-3 uppercase rounded-none">Details</button></Link>
 
         <button 
         onClick={() => handleAddToWishlist(item)}
-        className="btn text-xl font-bold bg-blue-600 text-white my-3">ADD WISHLIST</button>
+        className="btn text-base font-medium bg-blue-600 text-white my-3 rounded-none">ADD WISHLIST</button>
 
         </div>
     </div>)

@@ -13,7 +13,7 @@ const BlogDetails = () => {
     const [commentText, setCommentText] = useState("");
     const axiosPublic = useAxiosPublic();
 
-    const { _id, title, category, image, short_description, long_description, email} = useLoaderData();
+    const { _id, author_name, date_time, category, image, short_description, long_description, email} = useLoaderData();
     
     const { user } = useAuth();
 
@@ -44,9 +44,9 @@ const BlogDetails = () => {
 
     return (
 
-<div className="bg-white mx-12 md:mx-24">
+<div className="bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] py-24">
 
-<div className="pb-36 pt-24 mb-12 px-12 bg-blue-100">
+
 
     <Helmet>
         <title>BOHO PEOPLE | BLOG DETAILS</title>
@@ -58,13 +58,15 @@ const BlogDetails = () => {
     </SectionTitle>
 
 
+    <div className="mx-12 md:w-8/12 md:mx-auto">
+
 <div>
-    <img className="h-[800px] w-full rounded object-cover" src={image} alt="" />
+    <img className="h-[600px] w-full rounded-sm object-cover" src={image} alt="" />
 </div>
-<h3 className="text-5xl font-semibold text-center my-16">{title}</h3>
 
-
-<h2 className="text-xl font-semibold my-3 flex items-center gap-3">Category : <span className="text-2xl font-bold">{category}</span> </h2>
+<h3 className="text-lg font-medium mb-3 mt-6 flex items-center gap-3"> Category : {category}</h3>
+<h2 className="text-lg font-medium my-3 flex items-center gap-3">Author : {author_name}</h2>
+<h3 className="text-lg font-medium my-3 flex items-center gap-3">Date & Time : {date_time}</h3>
 
 <p className="text-xl font-medium text-gray-600 mb-4">{short_description}</p>
 
@@ -73,7 +75,7 @@ const BlogDetails = () => {
 {isBlogOwner ? 
 <Link to={(`/update-blog/${_id}`)}>
     <button
-        className="bg-blue-500 text-white btn px-4 py-2 text-xl rounded mb-6 uppercase">
+        className="bg-blue-500 text-white btn px-4 py-2 text-base rounded-sm mb-6 uppercase">
         Update Blog
     </button>
 </Link>
@@ -82,14 +84,14 @@ const BlogDetails = () => {
 }
 
 {isBlogOwner ? (
-    <p className="text-red-500">You cannot comment on your own blog.</p>
+    <p className="text-red-500 text-lg font-light">You cannot comment on your own blog.</p>
 ) : (
 <div>
     <textarea
         value={commentText}
         onChange={(e) => setCommentText(e.target.value)}
         placeholder="Write a comment..."
-        className="w-full border border-gray-300 rounded p-2 mb-4"
+        className="w-full h-32 border border-gray-300 rounded p-2 mb-4"
     />
     <button
         onClick={handleCommentSubmit}
