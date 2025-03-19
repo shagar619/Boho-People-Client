@@ -49,13 +49,13 @@ const BlogCategories = () => {
 
 
         <SwiperSlide>
-            <img src="https://i.ibb.co.com/LC2nxc6/andrew-neel-QLq-Nal-Pe0-RA-unsplash.jpg" />
+            <img className="" src="https://i.ibb.co.com/LC2nxc6/andrew-neel-QLq-Nal-Pe0-RA-unsplash.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-            <img src="https://i.ibb.co.com/59MnLNq/andrew-neel-ute2-XAFQU2-I-unsplash.jpg" />
+            <img className="" src="https://i.ibb.co.com/59MnLNq/andrew-neel-ute2-XAFQU2-I-unsplash.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-            <img src="https://i.ibb.co.com/h28NGLS/beautiful-blogger-recording-make-up-video.jpg" />
+            <img className="" src="https://i.ibb.co.com/h28NGLS/beautiful-blogger-recording-make-up-video.jpg" />
         </SwiperSlide>
         <SwiperSlide>
             <img src="https://i.ibb.co.com/8zYkp6S/beauty-vlogger-making-video-her-online-followers.jpg" />
