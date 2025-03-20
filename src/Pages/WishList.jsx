@@ -12,6 +12,7 @@ const WishList = () => {
 
     const [ wishlist, refetch ] = useWishlist();
     const axiosSecure = useAxiosSecure();
+    console.log(wishlist);
 
     const handleDeleteUser = (id) => {
         Swal.fire({

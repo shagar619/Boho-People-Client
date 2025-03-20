@@ -78,7 +78,7 @@ return (
     </ul>
     </div>
     <button className="btn p-0"><img className="w-14 h-12 rounded-md transition hover:scale-110" src={logo} alt="" /></button>
-    <h3 className="text-3xl font-bold text-blue-600 ml-4 transition hover:scale-110">BOHO PEOPLE</h3>
+    <h3 className="text-3xl font-bold text-blue-600 ml-4 transition hover:scale-110 hover:text-warning">BOHO PEOPLE</h3>
 </div>
 <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 space-x-8 text-xl font-medium uppercase text-gray-500">
@@ -93,19 +93,19 @@ return (
     <h3 className="text-xl font-semibold text-blue-600 hover:text-warning transition hover:scale-110">{user.email}</h3>
     <button 
     onClick={handleSignOut}
-    className="btn bg-blue-600 text-white text-xl border-none">Sign Out</button>
+    className="btn bg-blue-500 text-white text-xl border-none rounded-sm">Sign Out</button>
     </div>
     :
     <>
     <Link className="underline text-xl font-semibold text-blue-600 hover:text-warning transition hover:scale-110" to="/register">Register</Link>
-    <Link to="/signin"><button className="btn bg-blue-600 text-white border-none text-xl">Sign In</button></Link>
+    <Link to="/signin"><button className="btn bg-blue-500 text-white border-none rounded-sm text-xl">Sign In</button></Link>
     </>
     }
 
 </div>
 </div>
 </div>
-    );
+);
 };
 
 export default Navbar;

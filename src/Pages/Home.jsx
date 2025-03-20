@@ -4,7 +4,7 @@ import Comments from "../Components/Comments";
 import Hero from "../Components/Hero";
 import Newsletter from "../Components/Newsletter";
 import RecentBlog from "../Components/RecentBlog";
-import Editor from "../Components/Editor";
+import MidPart from "../Components/MidPart";
 
 const Home = () => {
     return (
@@ -17,6 +17,7 @@ const Home = () => {
             <Hero></Hero>
             <BlogCategories></BlogCategories>
             <RecentBlog></RecentBlog>
+            <MidPart></MidPart>
             <Comments></Comments>
             <Newsletter></Newsletter>
         </div>

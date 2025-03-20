@@ -28,12 +28,13 @@ const Comments = () => {
     return (
 
         <div className="">
-        <div className="w-9/12 mx-auto mb-24">
 
         <SectionTitle
         heading={"⭐ What Our Readers Say"}
         subHeading={"Discover what our readers think about our content! Read honest reviews and testimonials from our community. See how our blogs have inspired and informed people just like you. 📢✨"}>
         </SectionTitle>
+
+        <div className="w-7/12 mx-auto mb-12">
 
     <Swiper
         cssMode={true}
@@ -42,12 +43,11 @@ const Comments = () => {
         mousewheel={true}
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-        className="mySwiper bg-blue-50 rounded-lg shadow-lg">
-
+        className="bg-white rounded-lg pb-12">
         {
             comments.map(review => <SwiperSlide
             key={review._id}>
-                <div className="my-24 w-10/12 mx-auto flex flex-col items-center">
+                <div className="my-24 w-10/12 mx-auto flex flex-col items-center pb-12">
                     <h3><FaQuoteLeft className="text-5xl font-bold my-12"></FaQuoteLeft></h3>
                     <p className="text-center text-[#444444] text-xl">{review.text}</p>
                     <h3 className="text-center text-[#CD9003] text-3xl mt-4">{review.userName}</h3>
@@ -56,7 +56,6 @@ const Comments = () => {
         }
 
     </Swiper>
-            
 </div>
 </div>
 );

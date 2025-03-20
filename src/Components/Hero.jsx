@@ -18,7 +18,7 @@ const Hero = () => {
         <p className="my-8 text-xl font-medium text-white">
         BOHO PEOPLE is a vibrant and soulful blogging website dedicated to free-spirited living, creativity and a community of like-minded individuals who believe in living life with passion and purpose. <br /> 🌿✨ #StayWild #LiveBoho
         </p>
-        <button className="btn text-xl font-bold bg-blue-600 text-white border-none">Get Started</button>
+        <button className="btn text-xl font-bold bg-blue-600 text-white border-none rounded-sm">Get Started</button>
 </div>
 </div>
 </div>
