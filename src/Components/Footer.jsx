@@ -13,14 +13,14 @@ const Footer = () => {
 
         <div>
             <hr className="pt-4 mb-16" />
-            <div className="flex justify-between items-start">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-8 gap-6 items-start">
 
-                <div>
+                <div className='col-span-2'>
                 <div className='flex items-center'>
                 <img className='h-16 w-16 rounded' src={logo} alt="" />
                 <h3 className="text-3xl font-bold text-blue-600 ml-4">BOHO PEOPLE</h3>
                 </div>
-                    <p className='my-6 text-base font-normal text-gray-800'>BOHO PEOPLE is the heart of the design community and the <br /> best resource to discover and connect with <br /> designers and blogs worldwide.</p>
+                    <p className='my-6 text-base font-normal text-gray-800'>BOHO PEOPLE is the heart of the design community and the best resource to discover and connect with <br /> designers and blogs worldwide.</p>
                     <div className='flex items-center gap-4'>
                         <Link><FaFacebook className='h-8 w-8 text-white bg-blue-600 rounded-full'></FaFacebook></Link>
                         <Link><FaTwitter className='h-8 w-8 text-blue-600 bg-white rounded-full'></FaTwitter></Link>
@@ -28,7 +28,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className='flex flex-col space-y-3 text-base font-normal text-gray-800'>
+                <div className='flex flex-col text-center md:text-start space-y-3 text-base font-normal text-gray-800'>
                     <h3 className='text-xl font-semibold text-black mb-3'>Resources</h3>
                     <Link>About Us</Link>
                     <Link>Our Team</Link>
@@ -36,7 +36,7 @@ const Footer = () => {
                     <Link>Contact</Link>
                 </div>
 
-                <div className='flex flex-col space-y-3 text-base font-normal text-gray-800'>
+                <div className='flex flex-col space-y-3 text-center md:text-start text-base font-normal text-gray-800'>
                     <h3 className='text-xl font-semibold text-black mb-3'>Community</h3>
                     <Link>Features</Link>
                     <Link>Pricing</Link>
@@ -44,7 +44,7 @@ const Footer = () => {
                     <Link>FAQ</Link>
                 </div>
 
-                <div className='flex flex-col space-y-3 text-base font-normal text-gray-800'>
+                <div className='flex flex-col space-y-3 text-center md:text-start text-base font-normal text-gray-800'>
                     <h3 className='text-xl font-semibold text-black mb-3'>Quick Links</h3>
                     <Link>iOS</Link>
                     <Link>Android</Link>
@@ -52,7 +52,7 @@ const Footer = () => {
                     <Link>Desktop</Link>
                 </div>
 
-                <div className='flex flex-col space-y-3 text-base font-normal text-gray-800'>
+                <div className='flex flex-col space-y-3 text-center md:text-start text-base font-normal text-gray-800'>
                     <h3 className='text-xl font-semibold text-black mb-3'>More</h3>
                     <Link>Privacy</Link>
                     <Link>Help</Link>
@@ -61,11 +61,11 @@ const Footer = () => {
                 </div>
 
 
-                <div>
+                <div className='col-span-2'>
                     <h3 className='text-xl font-semibold text-black mb-5'>Download App</h3>
                     <p className='text-sm font-normal text-gray-800 mb-4'>Download our Apps and get extra 15% <br /> Discount on your first Order…!</p>
 
-                <div className='flex items-center gap-3'>
+                <div className='flex flex-col md:flex-row md:items-center gap-3'>
 
                 <Link className='bg-blue-600 text-white px-3 py-2 rounded-lg'>
                         <div className='flex items-center gap-3'>
