@@ -45,15 +45,44 @@ const AuthProvider = ({ children }) => {
 
 
 
+    // useEffect(() => {
+    //     const unSubscribe = onAuthStateChanged(auth, currentUser => {
+    //         setUser(currentUser)
+    //         setLoading(false);
+    //     })
+    //     return () => {
+    //         unSubscribe();
+    //     }
+    // } , [])
+
+
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
-            setUser(currentUser)
+            setUser(currentUser);
+
+            if(currentUser) {
+
+                // get token and store client
+                const userInfo = { email: currentUser.email };
+                axiosPublic.post('/jwt', userInfo)
+                .then(res => {
+                    if(res.data.token){
+                        localStorage.setItem('access-token', res.data.token);
+                    }
+                })
+
+            } else {
+                // TODO: remove token (if token stored in the client side : localStorage, caching, in memory)
+                localStorage.removeItem('access-token');
+            }
+
             setLoading(false);
         })
+
         return () => {
             unSubscribe();
         }
-    } , [])
+    } , [axiosPublic])
 
 
 

@@ -95,7 +95,7 @@ const Footer = () => {
             </div>
             <hr className="mt-10 mb-4" />
             <div className='flex justify-between items-center my-6 text-sm font-medium text-gray-900 pb-10'>
-                <h3>Copyright © 2024. BOHO PEOPLE all right reserved</h3>
+                <h3>Copyright © 2024. BOHO PEOPLE All right reserved</h3>
                 <div className='flex gap-5'>
                     <Link>Privacy Policy</Link>
                     <Link>Terms & Conditions</Link>
